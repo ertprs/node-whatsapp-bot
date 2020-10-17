@@ -134,6 +134,12 @@ module.exports.messageHandler = async (message, client) => {
           console.log(error.message);
         });
       break;
+      case '#shrtlink':
+            if (args.length !== 1)  return await client.reply(from, 'Kirim perintah *!shrtlink https://google.com*', id)
+            const slink = await get.get('https://api.haipbis.xyz/bitly?url='+ args[1]).json()
+            if (slink.error) return await client.reply(from, slink.error, id)
+            await client.reply(from, `ShortLink : ${slink.result}`, id)
+            break;
     default:
       if (!isGroupMsg) {
         const thanks = ['terimakasi', 'makasi', 'thx', 'thank', 'trim', 'oke'];
