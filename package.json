@@ -9,7 +9,7 @@
     "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.2.0",
     "libphonenumber-js": "^1.7.56",
-    "moment-timezone": "^0.5.31",
+    "moment-timezone": "^0.5.35",
     "mongoose": "^5.10.0",
     "qs": "^6.9.4",
     "video-url-link": "^0.1.4"
